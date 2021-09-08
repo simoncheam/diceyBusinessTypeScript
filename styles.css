@@ -1,0 +1,32 @@
+.die {
+
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+    color: black;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    
+}
+
+#diceDivId {
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.header-container{
+
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
