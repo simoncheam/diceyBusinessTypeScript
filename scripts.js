@@ -1,6 +1,9 @@
 "use strict";
-exports.__esModule = true;
-var sweetalert2_1 = require("sweetalert2");
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var sweetalert2_1 = __importDefault(require("sweetalert2"));
 // setup container div
 var container = document.createElement('div'); //create div
 container.className = 'header-container'; // create class name for div
@@ -21,15 +24,15 @@ var globalArr = [];
 var dieArr = ["\u2680", "\u2681", "\u2682", "\u2683", "\u2684", "\u2685"];
 var divCounter = 1;
 // Sweet Alert code
-var Toast = sweetalert2_1["default"].mixin({
+var Toast = sweetalert2_1.default.mixin({
     toast: true,
     position: 'top-end',
     showConfirmButton: false,
     timer: 2000,
     timerProgressBar: true,
     didOpen: function (toast) {
-        toast.addEventListener('mouseenter', sweetalert2_1["default"].stopTimer);
-        toast.addEventListener('mouseleave', sweetalert2_1["default"].resumeTimer);
+        toast.addEventListener('mouseenter', sweetalert2_1.default.stopTimer);
+        toast.addEventListener('mouseleave', sweetalert2_1.default.resumeTimer);
     }
 });
 var Die = /** @class */ (function () {
@@ -94,10 +97,17 @@ sumDie.addEventListener('click', function () {
     }
     console.log("Sum Die! " + result);
     // alert( `Sum of dice is = ${result}`);
-    sweetalert2_1["default"].fire({
+    sweetalert2_1.default.fire({
         title: "Sum of dice is = " + result,
         width: 600,
-        padding: '3em'
+        padding: '3em',
+        // background: '#fff url(/images/trees.png)',
+        // backdrop: `
+        //   rgba(0,0,123,0.4)
+        //   url("/images/nyan-cat.gif")
+        //   left top
+        //   no-repeat
+        // `
     });
     return result;
 });
